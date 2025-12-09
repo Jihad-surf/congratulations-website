@@ -1,0 +1,331 @@
+/* ==========================================
+   ESTILOS ADICIONAIS - FUNCIONALIDADES EXTRAS
+   ========================================== */
+
+/* Countdown Styles */
+.countdown {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.countdown-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(255, 182, 193, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.countdown-container h3 {
+    font-family: 'Playfair Display', serif;
+    color: #8B4B6B;
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+}
+
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.time-unit {
+    background: linear-gradient(135deg, #CD8CAE, #E6B8D6);
+    color: white;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    min-width: 80px;
+    box-shadow: 0 8px 20px rgba(205, 140, 174, 0.4);
+}
+
+.time-unit .number {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+
+.time-unit .label {
+    display: block;
+    font-size: 0.8rem;
+    opacity: 0.9;
+    margin-top: 5px;
+}
+
+/* Floating Menu Styles */
+.floating-menu {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 25px;
+    padding: 10px;
+    box-shadow: 0 10px 30px rgba(255, 182, 193, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.floating-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.floating-menu li {
+    margin: 8px 0;
+}
+
+.floating-menu a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #CD8CAE, #E6B8D6);
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(205, 140, 174, 0.3);
+}
+
+.floating-menu a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(205, 140, 174, 0.5);
+}
+
+/* Particles Styles */
+.particles-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: linear-gradient(45deg, #FFB6C1, #DDA0DD);
+    border-radius: 50%;
+    animation: particleFloat 5s infinite linear;
+    opacity: 0.7;
+}
+
+@keyframes particleFloat {
+    0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.7;
+    }
+    90% {
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Confetti Styles */
+.confetto {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    z-index: 9999;
+    pointer-events: none;
+    animation: confettiFall 4s linear forwards;
+}
+
+@keyframes confettiFall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+/* Special Message Styles */
+.special-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(135deg, #CD8CAE, #E6B8D6);
+    color: white;
+    padding: 20px 40px;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    z-index: 10000;
+    box-shadow: 0 15px 40px rgba(205, 140, 174, 0.5);
+    animation: messageAppear 0.5s ease-out;
+}
+
+@keyframes messageAppear {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
+
+/* Loader Styles */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ffd1dc 0%, #ffe4e6 25%, #fff0f5 50%, #fdf8f5 75%, #fff5ee 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    transition: opacity 0.5s ease;
+}
+
+.loader-content {
+    text-align: center;
+}
+
+.loader-heart {
+    font-size: 4rem;
+    color: #CD8CAE;
+    animation: heartBeat 1.5s infinite;
+}
+
+.loader-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    color: #8B4B6B;
+    margin-top: 20px;
+}
+
+@keyframes heartBeat {
+    0%, 50%, 100% {
+        transform: scale(1);
+    }
+    25%, 75% {
+        transform: scale(1.2);
+    }
+}
+
+/* Lazy Loading Images */
+.lazy {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.lazy.loaded {
+    opacity: 1;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+    .floating-menu {
+        display: none;
+    }
+    
+    .countdown-timer {
+        gap: 15px;
+    }
+    
+    .time-unit {
+        min-width: 70px;
+        padding: 10px;
+    }
+    
+    .time-unit .number {
+        font-size: 1.5rem;
+    }
+    
+    .particles-container {
+        display: none;
+    }
+}
+
+/* High Performance Mode for Mobile */
+.mobile * {
+    animation-duration: 0.5s !important;
+    transition-duration: 0.3s !important;
+}
+
+/* Dark Mode Support (Optional) */
+@media (prefers-color-scheme: dark) {
+    .floating-menu {
+        background: rgba(44, 44, 44, 0.9);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .floating-hearts,
+    .particles-container {
+        display: none;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .floating-menu,
+    .floating-hearts,
+    .particles-container,
+    .countdown,
+    .confirm-btn,
+    .maps-btn {
+        display: none !important;
+    }
+    
+    body {
+        background: white !important;
+    }
+    
+    section {
+        page-break-inside: avoid;
+    }
+}
+
+/* Loading Animation for Body */
+body.loaded {
+    animation: pageLoad 1s ease-out;
+}
+
+@keyframes pageLoad {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
