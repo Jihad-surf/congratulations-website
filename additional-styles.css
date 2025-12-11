@@ -223,15 +223,6 @@
     margin-top: 20px;
 }
 
-@keyframes heartBeat {
-    0%, 50%, 100% {
-        transform: scale(1);
-    }
-    25%, 75% {
-        transform: scale(1.2);
-    }
-}
-
 /* Lazy Loading Images */
 .lazy {
     opacity: 0;
@@ -253,7 +244,7 @@
     }
     
     .time-unit {
-        min-width: 70px;
+        max-width: 70px;
         padding: 10px;
     }
     
@@ -266,33 +257,6 @@
     }
 }
 
-/* High Performance Mode for Mobile */
-.mobile * {
-    animation-duration: 0.5s !important;
-    transition-duration: 0.3s !important;
-}
-
-/* Dark Mode Support (Optional) */
-@media (prefers-color-scheme: dark) {
-    .floating-menu {
-        background: rgba(44, 44, 44, 0.9);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-}
-
-/* Accessibility Improvements */
-@media (prefers-reduced-motion: reduce) {
-    * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-    }
-    
-    .floating-hearts,
-    .particles-container {
-        display: none;
-    }
-}
 
 /* Print Styles */
 @media print {
